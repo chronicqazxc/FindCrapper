@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>City:</strong>
+  <%= @crapper.city %>
+</p>
+
+<p>
+  <strong>District:</strong>
+  <%= @crapper.district %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @crapper.name %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @crapper.address %>
+</p>
+
+<%= link_to 'Edit', edit_crapper_path(@crapper) %> |
+<%= link_to 'Back', crappers_path %>

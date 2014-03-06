@@ -1,0 +1,33 @@
+<%= form_for(@crapper) do |f| %>
+  <% if @crapper.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@crapper.errors.count, "error") %> prohibited this crapper from being saved:</h2>
+
+      <ul>
+      <% @crapper.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :city %><br>
+    <%= f.text_field :city %>
+  </div>
+  <div class="field">
+    <%= f.label :district %><br>
+    <%= f.text_field :district %>
+  </div>
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :address %><br>
+    <%= f.text_field :address %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

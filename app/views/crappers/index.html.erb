@@ -1,0 +1,33 @@
+<h1>Listing crappers</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>City</th>
+      <th>District</th>
+      <th>Name</th>
+      <th>Address</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @crappers.each do |crapper| %>
+      <tr>
+        <td><%= crapper.city %></td>
+        <td><%= crapper.district %></td>
+        <td><%= crapper.name %></td>
+        <td><%= crapper.address %></td>
+        <td><%= link_to 'Show', crapper %></td>
+        <td><%= link_to 'Edit', edit_crapper_path(crapper) %></td>
+        <td><%= link_to 'Destroy', crapper, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Crapper', new_crapper_path %>
